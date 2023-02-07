@@ -1,0 +1,38 @@
+diff --git a/node_modules/react-native-snackbar-component/index.js b/node_modules/react-native-snackbar-component/index.js
+index ae1e313..8a7e687 100644
+--- a/node_modules/react-native-snackbar-component/index.js
++++ b/node_modules/react-native-snackbar-component/index.js
+@@ -5,7 +5,6 @@ import {
+   Text,
+   Animated,
+   Easing,
+-  ViewPropTypes,
+ } from 'react-native';
+ import { Touchable } from './src';
+ 
+@@ -191,9 +190,8 @@ SnackbarComponent.propTypes = {
+   position: PropTypes.oneOf(['bottom', 'top']), // bottom (default), top
+   // eslint-disable-next-line react/no-unused-prop-types
+   autoHidingTime: PropTypes.number, // How long (in milliseconds) the snack bar will be hidden.
+-  containerStyle: ViewPropTypes.style,
+-  messageStyle: Text.propTypes.style,
+-  actionStyle: Text.propTypes.style,
++  //messageStyle: Text.propTypes.style,
++  //actionStyle: Text.propTypes.style,
+ };
+ 
+ const styles = StyleSheet.create({
+diff --git a/node_modules/react-native-snackbar-component/src/Touchable.js b/node_modules/react-native-snackbar-component/src/Touchable.js
+index 0b08723..243404a 100644
+--- a/node_modules/react-native-snackbar-component/src/Touchable.js
++++ b/node_modules/react-native-snackbar-component/src/Touchable.js
+@@ -4,8 +4,8 @@ import {
+   View,
+   TouchableOpacity,
+   TouchableNativeFeedback,
+-  ViewPropTypes,
+ } from 'react-native';
++import {ViewPropTypes} from 'deprecated-react-native-prop-types';
+ import {
+   IS_ANDROID,
+   IS_LT_LOLLIPOP,
