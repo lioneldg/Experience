@@ -1,0 +1,20 @@
+diff --git a/node_modules/react-native-fab/src/Touchable.js b/node_modules/react-native-fab/src/Touchable.js
+index b794d44..064d444 100644
+--- a/node_modules/react-native-fab/src/Touchable.js
++++ b/node_modules/react-native-fab/src/Touchable.js
+@@ -4,7 +4,6 @@ import {
+   View,
+   TouchableOpacity,
+   TouchableNativeFeedback,
+-  ViewPropTypes,
+ } from 'react-native';
+ import {
+   IS_ANDROID,
+@@ -53,7 +52,6 @@ const Touchable = ({
+ 
+ Touchable.propTypes = {
+   onPress: PropTypes.func,
+-  style: ViewPropTypes.style,
+   buttonColor: PropTypes.string,
+   children: PropTypes.node.isRequired,
+ };
